@@ -1,9 +1,9 @@
-Paramount: Then and now template
+Then and now template
 =================================
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-This project will become a new then-and-now template for Statesman. It uses the [twentytwenty](https://github.com/zurb/twentytwenty) package from Zurb.
+This is a new then-and-now template for Statesman. It uses the [twentytwenty](https://github.com/zurb/twentytwenty) package from Zurb.
 
 ## Requirements
 
@@ -13,25 +13,39 @@ This project will become a new then-and-now template for Statesman. It uses the 
 
 ## Setup
 
-When the template repo is made (and it isn't yet):
+* Download the zip to your machine
+* unzip it into the directory of your choosing
+
+At this point, you should be able to view the content through a browser in your localhost, as all the necessary files are in:
+
+* `dist/`: css and js files
+* `assets/`: example images and other assets
+* `index.php`: the content
+
+To make your project dev ready:
 
 ```
-$ curl -OL https://github.com/statesman/then-and-now/archive/master.zip
-$ unzip master.zip -d YOUR_PROJECT_NAME
-$ cd YOUR_PROJECT_NAME
+$ npm install
+$ bower install
+$ grunt
 ```
+
+Any change to files in `src` will require the grunt default task to update files in `dist/`.
+
 
 ## Usage
 
-`assets/`: where you put the photos you want in your slider.
-
-`src/js/`: JavaScript files that Grunt will concatenate, Uglify and save in `dist/scripts.js`
-
-`src/css/`: `less` files that Grunt will transpile into CSS in `dist/style.css`
-
-`index.php`: the only page in the file to start with. There is a php array of meta tags at the top. It also utilizes files in `includes`.
+`index.php`: the only published viewing page in the project. There is a php array of meta tags at the top. It also utilizes files in `includes`.
 
 `includes`: where partial files are stored for advertising and ads. The two files that need to be edited:
 
   * `project-metrics.inc`: where to set metrics.
   * `advertising.inc`: where to change advertising, FWIW
+  * Update `assets/share.jpg` to something appropriate for your project.
+
+`assets/`: where you put the photos and other assets you want in your sliders.
+
+`src/js/`: JavaScript files that Grunt will concatenate, Uglify and save in `dist/scripts.js`
+
+`src/css/`: `less` files that Grunt will transpile into CSS in `dist/style.css`
+
