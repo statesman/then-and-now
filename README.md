@@ -1,6 +1,12 @@
 Then and now template
 =================================
 
+## Of note: there is a tool
+
+There is a Knight Center project [Juxtapose](http://juxtapose.knightlab.com/#create-new) that does this pretty easily. Might consider it.
+
+## Back to the program
+
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 This is a new then-and-now template for Statesman. It uses the [twentytwenty](https://github.com/zurb/twentytwenty) package from Zurb.
