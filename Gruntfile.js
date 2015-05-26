@@ -92,7 +92,7 @@ module.exports = function(grunt) {
           authKey: 'cmg'
         },
         src: 'public',
-        dest: '/stage_aas/projects/then-and-now/memorial-day-flooding-2015/',
+        dest: '/stage_aas/projects/then-and-now/',
         exclusions: ['dist/tmp','Thumbs.db','.DS_Store'],
         simple: false,
         useList: false
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
           authKey: 'cmg'
         },
         src: 'public',
-        dest: '/prod_aas/projects/then-and-now/memorial-day-flooding-2015/',
+        dest: '/prod_aas/projects/then-and-now/',
         exclusions: ['dist/tmp','Thumbs.db','.DS_Store'],
         simple: false,
         useList: false
@@ -122,10 +122,10 @@ module.exports = function(grunt) {
           icon_url: 'http://vermilion1.github.io/presentations/grunt/images/grunt-logo.png'
         },
         stage: {
-          text: 'Project published to stage: http://stage.host.coxmediagroup.com/aas/projects/then-and-now/memorial-day-flooding-2015/ {{message}}'
+          text: 'Project published to stage: http://stage.host.coxmediagroup.com/aas/projects/then-and-now/ {{message}}'
         },
         prod: {
-          text: 'Project published to prod: http://projects.statesman.com/then-and-now/memorial-day-flooding-2015/ {{message}}'
+          text: 'Project published to prod: http://projects.statesman.com/then-and-now/ {{message}}'
         }
     }
 
@@ -144,5 +144,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['copy', 'less', 'jshint','bootlint','uglify']);
   grunt.registerTask('stage', ['default','ftpush:stage','slack:stage']);
-  grunt.registerTask('prod', ['default','ftpush:prod','slack:prod']);
+//  grunt.registerTask('prod', ['default','ftpush:prod','slack:prod']);
 };

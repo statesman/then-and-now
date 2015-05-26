@@ -64,16 +64,16 @@
     <div class="row">
       <div class="col-lg-12 header">
       <h4>THEN AND NOW</h4>
-      <h1>Memorial Day 2015 flooding in Austin, then and now</h1>
-      <p><small>Interactive by Rob Villalpando. Photos by Phil Jankowski, Nicole Chavez and Andrew Chavez.  </small></p>
-      <p>On the left, flooding left downtown Austin landmarks and streets under water on Monday, May 25, 2015. On the right, flood waters receded to reveal the damage done on Tuesday, May 26, 2015.</p>
+      <h1>Headline for then and now</h1>
+      <p><small>Byline  </small></p>
+      <p>Description of events</p>
       </div>
     </div>
 
-<!-- vert
+
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <div id="thenAndNow">            
+        <div id="thenAndNow1">            
           <div><img src="assets/1935-paramount-sidewalk.jpg"  class="img-responsive" alt="slide 1" /></div>
           <div><img src="assets/1935-paramount-sidewalk-now.jpg" class="img-responsive" alt="slide 2" /></div>
         </div>
@@ -84,39 +84,18 @@
         <p class="caption clearfix"><em class="pull-right credit">Austin History Center</em></p>
       </div>
     </div>
--->
+
 
     <div class="row">
       <div class="col-lg-12">
         <h2>Stevie Ray Vaughan statue</h2>
-        <div id="thenAndNow1">            
+        <div id="thenAndNow2">            
           <div><img src="assets/stevie-monday.jpg"  class="img-responsive" alt="slide 1" /></div>
           <div><img src="assets/stevie-tuesday.jpg" class="img-responsive" alt="slide 2" /></div>
         </div>
         <!--  <p class="caption clearfix">Caption <em class="pull-right credit">Austin History Center</em></p> -->
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>Sixth and Bowie streets</h2>
-        <div id="thenAndNow2">            
-          <div><img src="assets/sixth-bowie-monday.jpg"  class="img-responsive" alt="slide 1" /></div>
-          <div><img src="assets/sixth-bowie-tuesday.jpg" class="img-responsive" alt="slide 2" /></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-10">
-        <h2>Fifth and Bowie streets</h2>
-        <div id="thenAndNow3">            
-          <div><img src="assets/fifth-bowie-monday.jpg"  class="img-responsive" alt="slide 1" /></div>
-          <div><img src="assets/fifth-bowie-tuesday.jpg" class="img-responsive" alt="slide 2" /></div>
-        </div>
-      </div>
-    </div>
-
 
   </div>
 

@@ -4,7 +4,7 @@
 
     //twentytwenty sliders for index
     $(window).load(function() {
-      $("#thenAndNow").twentytwenty();
+      $("#thenAndNow1").twentytwenty();
      });
     $(window).load(function() {
       $("#thenAndNow2").twentytwenty();
