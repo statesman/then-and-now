@@ -11,8 +11,8 @@
         .done(function() {
           $slider.twentytwenty();
           var images = $slider.children('img');
-          $slider.find('.twentytwenty-before-label').attr('data-content', $(images[0]).attr('data-date'));
-          $slider.find('.twentytwenty-after-label').attr('data-content', $(images[1]).attr('data-date'));
+          $slider.find('.twentytwenty-before-label').attr('data-content', $(images[0]).attr('data-label'));
+          $slider.find('.twentytwenty-after-label').attr('data-content', $(images[1]).attr('data-label'));
         })
         .fail(function() {
           $slider.parent().remove();
