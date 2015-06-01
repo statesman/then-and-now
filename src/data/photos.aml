@@ -3,6 +3,10 @@ There are some required fields:
   * title
   * a.filename: image-name.jpg
   * b.filename: image-name.jpg
+Others possible:
+  * caption
+  * a.label
+  * b.label
 :endskip
 
 
@@ -10,7 +14,8 @@ There are some required fields:
 
 id: 01
 title: Title of 1st image
-caption: What the photos are about is about.
+caption: What the photos are all about.
+credit: Photog
 a.filename: 01a.jpg
 b.filename: 01b.jpg
 a.label: Before
@@ -18,6 +23,7 @@ b.label: After
 
 id: 02
 title: Title of 2nd image
+caption: What the photos are all about.
 a.filename: 02a.jpg
 b.filename: 02b.jpg
 a.label: Then
