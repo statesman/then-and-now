@@ -1,5 +1,5 @@
 {
-  "name": "Timeline",
+  "name": "Then-and-now",
   "version": "0.0.0",
   "private": true,
   "ignore": [
@@ -13,7 +13,9 @@
     "font-awesome": "~4.2.0",
     "jquery": "~2.1.1",
     "bootstrap": "~3.3.1",
-    "leaflet": "~0.7.3",
     "twentytwenty": "*"
+  },
+  "devDependencies": {
+    "imagesloaded": "~3.1.8"
   }
 }

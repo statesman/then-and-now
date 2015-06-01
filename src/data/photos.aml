@@ -1,0 +1,23 @@
+[images]
+
+id: 01
+title: Pedernales River at Texas 71
+caption: What the photos are about is about.
+a.filename: 01a.jpg
+b.filename: 01b.jpg
+a.label: Before
+b.label: After
+
+id: 02
+title: Pedernales River at Texas 71
+a.filename: 02a.jpg
+b.filename: 02b.jpg
+a.label: Then
+b.label: Now
+
+id: 03
+title: Pedernales River at Texas 71
+a.filename: 03a.jpg
+b.filename: 03b.jpg
+
+
