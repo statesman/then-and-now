@@ -48,6 +48,7 @@ module.exports = function(grunt) {
         files: {
           'public/dist/scripts.js': [
             'bower_components/jquery/dist/jquery.js',
+            'bower_components/imagesloaded/imagesloaded.pkgd.js',
             'bower_components/twentytwenty/js/jquery.twentytwenty.js',
             'bower_components/twentytwenty/js/jquery.event.move.js',
             'src/js/main.js'
@@ -64,11 +65,23 @@ module.exports = function(grunt) {
       files: ['public/**.php','public/**.inc'],
     },
 
+    archieml: {
+      data: {
+        files: {
+          'public/dist/data.json': 'src/data/photos.aml'
+        }
+      },
+    },
+
     // Watch for changes in LESS and JavaScript files,
     // relint/retranspile when a file changes
     watch: {
       options: {
         livereload: true
+      },
+      data: {
+        files: ['src/data/*.aml'],
+        tasks: ['archieml']
       },
       markup: {
         files: ['public/*.php','public/includes/*.inc']
@@ -141,8 +154,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ftpush');
   grunt.loadNpmTasks('grunt-slack-hook');
   grunt.loadNpmTasks('grunt-bootlint');
+  grunt.loadNpmTasks('grunt-archieml');
 
-  grunt.registerTask('default', ['copy', 'less', 'jshint','bootlint','uglify']);
+  grunt.registerTask('default', ['archieml', 'copy', 'less', 'jshint','bootlint','uglify']);
   grunt.registerTask('stage', ['default','ftpush:stage','slack:stage']);
 //  grunt.registerTask('prod', ['default','ftpush:prod','slack:prod']);
 };

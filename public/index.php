@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <?php
   $meta = array(
-    'title' => 'Memorial Day 2015 flooding in Austin, then and now | Austin American-Statesman',
-    'description' => 'A look at Austin landmarks and streets under water during the flooding on Monday, and the damage revealed after waters receded on Tuesday.',
+    'title' => 'Then and now | Austin American-Statesman',
+    'description' => 'A special look at photos from then and now.',
     'thumbnail' => 'http://projects.statesman.com/then-and-now/memorial-day-flooding-2015/assets/share.jpg',
     'url' => 'http://projects.statesman.com/then-and-now/memorial-day-flooding-2015/',
     'twitter' => 'statesman'
@@ -64,38 +64,42 @@
     <div class="row">
       <div class="col-lg-12 header">
       <h4>THEN AND NOW</h4>
-      <h1>Headline for then and now</h1>
-      <p><small>Byline  </small></p>
-      <p>Description of events</p>
+      <h1><?php print $meta['title']; ?></h1>
+      <p class="author">By <a href="">Author Name</a></p>
+      <p>Description</p>
+      <p><a href="#" target="_blank">More at &gt; </a>
       </div>
     </div>
 
+    <?php
+      $json = file_get_contents('dist/data.json');
+      $photos = json_decode($json);
+    ?>
 
+
+
+<!-- NEEEEEEEED TO EDIT OUT LAKE-SPECIFIC STUFF -->
     <div class="row">
-      <div class="col-lg-8 col-md-8">
-        <div id="thenAndNow1">            
-          <div><img src="assets/1935-paramount-sidewalk.jpg"  class="img-responsive" alt="slide 1" /></div>
-          <div><img src="assets/1935-paramount-sidewalk-now.jpg" class="img-responsive" alt="slide 2" /></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4">
-        <h2 style="margin-top:0px;">1935</h2>
-        <p>A sidewalk view of the Paramount sign before 1935. The State Theater replaced the building to the left.</p>
-        <p class="caption clearfix"><em class="pull-right credit">Austin History Center</em></p>
+      <div class="col-xs-12">
+        <?php foreach($photos->images as $photo): ?>
+          <div class="then-and-now-wrapper">
+            <h2 class="text-center"><?php echo $photo->title; ?></h2>
+              <div class="then-and-now">
+              <img src="assets/<?php echo $photo->a->filename ;?>" class="img-responsive" data-date="<?php echo $photo->b->date; ?>"/>
+              <img src="assets/<?php echo $photo->b->filename ;?>" class="img-responsive" data-date="<?php echo $photo->a->date; ?>"/>
+              <?php if(isset($photo->caption)): ?>
+              <p class="caption clearfix">
+                <?php echo $photo->caption; ?>
+                  <?php if(isset($photo->credit)): ?>
+                    <em class="pull-right credit"><?php echo $photo->credit; ?></em>
+                  <?php endif; ?></p>
+              <?php endif; ?>
+              </div>
+          </div>
+        <?php endforeach; ?>
       </div>
     </div>
 
-
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>Stevie Ray Vaughan statue</h2>
-        <div id="thenAndNow2">            
-          <div><img src="assets/stevie-monday.jpg"  class="img-responsive" alt="slide 1" /></div>
-          <div><img src="assets/stevie-tuesday.jpg" class="img-responsive" alt="slide 2" /></div>
-        </div>
-        <!--  <p class="caption clearfix">Caption <em class="pull-right credit">Austin History Center</em></p> -->
-      </div>
-    </div>
 
   </div>
 
