@@ -82,8 +82,8 @@
           <div class="then-and-now-wrapper">
             <h2 class="text-center"><?php echo $photo->title; ?></h2>
               <div class="then-and-now">
-              <img src="assets/<?php echo $photo->a->filename ;?>" class="img-responsive" <?php if(isset($photo->a->label)): ?> data-label="<?php echo $photo->a->label; ?>"<?php endif; ?> />
-              <img src="assets/<?php echo $photo->b->filename ;?>" class="img-responsive" <?php if(isset($photo->b->label)): ?> data-label="<?php echo $photo->b->label; ?>"<?php endif; ?> />
+              <img src="assets/<?php echo $photo->a->filename ;?>" class="img-responsive" <?php if(isset($photo->a->label)): ?>data-label="<?php echo $photo->a->label; ?>"<?php endif; ?> />
+              <img src="assets/<?php echo $photo->b->filename ;?>" class="img-responsive" <?php if(isset($photo->b->label)): ?>data-label="<?php echo $photo->b->label; ?>"<?php endif; ?> />
               </div>
               <?php if(isset($photo->caption)): ?>
               <p class="caption clearfix">
