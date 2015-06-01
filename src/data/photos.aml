@@ -1,3 +1,11 @@
+:skip
+There are some required fields:
+  * title
+  * a.filename: image-name.jpg
+  * b.filename: image-name.jpg
+:endskip
+
+
 [images]
 
 id: 01
