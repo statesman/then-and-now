@@ -1,22 +1,36 @@
+:skip
+There are some required fields:
+  * title
+  * a.filename: image-name.jpg
+  * b.filename: image-name.jpg
+Others possible:
+  * caption
+  * a.label
+  * b.label
+:endskip
+
+
 [images]
 
 id: 01
-title: Pedernales River at Texas 71
-caption: What the photos are about is about.
+title: Title of 1st image
+caption: What the photos are all about.
+credit: Photog
 a.filename: 01a.jpg
 b.filename: 01b.jpg
 a.label: Before
 b.label: After
 
 id: 02
-title: Pedernales River at Texas 71
+title: Title of 2nd image
+caption: What the photos are all about.
 a.filename: 02a.jpg
 b.filename: 02b.jpg
 a.label: Then
 b.label: Now
 
 id: 03
-title: Pedernales River at Texas 71
+title: Title of 3rd image
 a.filename: 03a.jpg
 b.filename: 03b.jpg
 
