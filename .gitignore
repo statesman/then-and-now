@@ -33,8 +33,6 @@ node_modules
 ### Bower ###
 bower_components
 
-# Created by https://www.gitignore.io
-
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -57,3 +55,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# dist folder that will be generated locally
+dist/
