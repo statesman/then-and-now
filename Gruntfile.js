@@ -96,7 +96,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // stage path needs to be set
+    // stage output
     ftpush: {
       stage: {
         auth: {
@@ -105,12 +105,12 @@ module.exports = function(grunt) {
           authKey: 'cmg'
         },
         src: 'public',
-        dest: '/stage_aas/projects/then-and-now/',
+        dest: '/stage_aas/projects/then-and-now/template/',
         exclusions: ['dist/tmp','Thumbs.db','.DS_Store'],
         simple: false,
         useList: false
       },
-      // prod path will need to change
+      // production output
       prod: {
         auth: {
           host: 'host.coxmediagroup.com',
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
           authKey: 'cmg'
         },
         src: 'public',
-        dest: '/prod_aas/projects/then-and-now/',
+        dest: '/stage_aas/projects/then-and-now/template', //reset to prod
         exclusions: ['dist/tmp','Thumbs.db','.DS_Store'],
         simple: false,
         useList: false
@@ -135,7 +135,7 @@ module.exports = function(grunt) {
           icon_url: 'http://vermilion1.github.io/presentations/grunt/images/grunt-logo.png'
         },
         stage: {
-          text: 'Project published to stage: http://stage.host.coxmediagroup.com/aas/projects/then-and-now/ {{message}}'
+          text: 'Project published to stage: http://stage.host.coxmediagroup.com/aas/projects/then-and-now/template/ {{message}}'
         },
         prod: {
           text: 'Project published to prod: http://projects.statesman.com/then-and-now/ {{message}}'
